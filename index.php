@@ -26,29 +26,43 @@ and open the template in the editor.
           <div class="row">
             <div class="col-md-12 thumbnail">
                 <h1>Piedra Papel Tijera Lagarto Spock</h1>
-                <p>Esta es la página para el juego, en la imagen inferior tienes la img con la lógica.</p>
-                <p>Puedes seleccionar la acción que desees y la máquina elegirá por tí un "Contrincante", tras lo cual se mostrará el resultado por pantalla.</p>
+                <p>Esta es la página para el juego, en la imagen inferior tienes la img con la lógica. Puedes seleccionar la opción que desees para uno o dos jugadores; si dejas en "Seleccione..." la opción 2 la máquina elegirá tu "contrincante. Finalmente se mostrará el resultado en la casilla a la derecha. Si quieres volver a jugar basta con clicar <b>Play<b> de nuevo.</p>
             </div>
           </div>
           <div class="row">
-            <div class="col-md-2">
+            <div class="col-md-1">
                 <h4>Elige bien ;-)</h4>
             </div>
             <div class="col-md-2">
-                    <label for="choiceSelect">Opciones disponibles:</label>
-                    <select class="form-control selectpicker show-tick show-menu-arrow" id="choiceSelect" data-show-icon="true">
-                      <option value="0">Piedra</option>
-                      <option value="1">Papel</option>
-                      <option value="2">Tijera</option>
-                      <option value="3">Lagarto</option>
-                      <option value="4">Spock</option><!-- class="fa fa-hand-spock-o" -->
-                    </select>
+                <label for="choiceSelect">Opciones disponibles:</label>
+                <select class="form-control selectpicker show-tick show-menu-arrow" id="choiceSelect" data-show-icon="true">
+                  <option value="0">Piedra</option>
+                  <option value="1">Papel</option>
+                  <option value="2">Tijera</option>
+                  <option value="3">Lagarto</option>
+                  <option value="4">Spock</option><!-- class="fa fa-hand-spock-o" -->
+                </select>
             </div>
             <div class="col-md-2">
-                <button type="button" class="btn btn-success" id="play">Play</button>
+                <label for="choiceSelect2">Jugador2:</label>
+                <select class="form-control selectpicker show-tick show-menu-arrow" id="choiceSelect2" data-show-icon="true">
+                    <option value="-1" style="background: #5cb85c; color: #fff;" selected="selected"><b>Seleccione...</b></option>
+                  <option value="0">Piedra</option>
+                  <option value="1">Papel</option>
+                  <option value="2">Tijera</option>
+                  <option value="3">Lagarto</option>
+                  <option value="4">Spock</option><!-- class="fa fa-hand-spock-o" -->
+                </select>
             </div>
-            <div class="col-md-6">
-                <div class="alert alert-info"><!--.alert-dismissable-->
+            <div class="col-md-1">
+                <button type="button" class="btn btn-success" id="play"><b>Play</b></button>
+            </div>
+            <div class="col-md-2">
+                <div class="alert alert-warning" id="resultMachine"><!--.alert-dismissable-->
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="alert alert-info" id="resultBox"><!--.alert-dismissable-->
                   Aquí aparecerá el resultado.
                 </div>
             </div>
