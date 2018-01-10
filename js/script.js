@@ -65,7 +65,7 @@ function checkWinner (player1, player2){
     } else if(player1===3) { //lizard
         $("#resultMachine").html("<b>Lagarto.</b>");
         // lizard beats paper.	
-        if( player2 === 2){
+        if( player2 === 1){
             result = -1;
         // lizard beats spock.
         }else if(player2 === 4){
